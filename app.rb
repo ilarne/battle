@@ -16,6 +16,7 @@ class Battle < Sinatra::Base
   get '/play' do
     @player_1 = session[:Player1]
     @player_2 = session[:Player2]
+    @player_2_health = 30
     erb(:start_battle)
   end
 end

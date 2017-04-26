@@ -1,9 +1,13 @@
 feature 'Entering names' do
   scenario 'submitting names' do
-    visit '/'
-    fill_in 'Player1', with: 'CaptainCode'
-    fill_in 'Player2', with: 'Graham'
-    click_on 'Submit'
+    sign_in_and_play
     expect(page).to have_content('CaptainCode vs Graham')
+  end
+end
+
+feature 'Displaying health' do
+  scenario 'viewing hit points' do
+    sign_in_and_play
+    expect(page).to have_content('Graham: 30 HP')
   end
 end
