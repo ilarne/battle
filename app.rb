@@ -1,7 +1,7 @@
 require 'sinatra'
 
 class Battle < Sinatra::Base
-  enable :sessions
+   enable :sessions
 
   get "/" do
     erb(:index)
@@ -14,9 +14,16 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+    p session[:Player1]
+    p session[:Player2]
     @player_1 = session[:Player1]
     @player_2 = session[:Player2]
     @player_2_health = 30
     erb(:start_battle)
+  end
+
+  get '/wrecked' do
+    @player_2 = session[:Player2]
+    erb(:wrecked)
   end
 end

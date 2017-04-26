@@ -51,6 +51,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  rack
   rspec
   shotgun
   sinatra

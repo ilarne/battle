@@ -1,2 +1,6 @@
 
-<%= @player_1 + " vs " + @player_2 ": " + @player_2_health + " HP" %>
+<%= @player_1 + " vs " + @player_2 + ": " + @player_2_health.to_s + " HP" %>
+
+<form action="/wrecked" method="get">
+  <input type="submit" value="Attack!">
+</form>
