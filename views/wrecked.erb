@@ -1,4 +1,8 @@
 
-<%= "#{@player_2.name} was attacked!" %>
+<%= "#{@game.next_turn.name} was attacked!" %>
 
-<%= "#{@player_2.name}: #{@player_2.health} HP" %>
+<%= "#{@game.next_turn.name}: #{@game.next_turn.health} HP" %>
+
+<form action="/play" method="get">
+  <input type="submit" value="Switch turns">
+</form>

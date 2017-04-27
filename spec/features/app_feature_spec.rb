@@ -24,4 +24,12 @@ feature 'Attacking' do
     click_on 'Attack!'
     expect(page).to have_content('Graham: 20 HP')
   end
+
+feature 'Switching turns' do
+  scenario 'switch to other player' do
+    sign_in_and_play
+    click_on 'Attack!'
+    expect(page).to have_button('Switch turns')
+  end
+end
 end
