@@ -13,8 +13,8 @@ describe Player do
 
   describe '#health' do
     it 'reduces health by 10' do
-    game.attack(game.player1)
-    expect(game.player1.health).to eq 20
+    game.attack(game.next_turn)
+    expect(game.next_turn.health).to eq 20
   end
  end
 end

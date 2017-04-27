@@ -16,12 +16,13 @@ class Battle < Sinatra::Base
 
   get '/play' do
     @game = $game
-    erb(:start_battle)
+    erb(:play)
   end
 
   get '/wrecked' do
     @game = $game
-    @game.attack(@game.player2) # why does this always pass even with just '@game'???
+    @game.attack(@game.next_turn)
+    @game.switch_turns
     erb(:wrecked)
   end
 end
