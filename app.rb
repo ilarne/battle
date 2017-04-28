@@ -20,12 +20,10 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-  #   @game = Game.current_game
     erb(:play)
   end
 
   get '/wrecked' do
-    #  @game = Game.current_game
     @game.attack(@game.next_turn)
     @game.switch_turns
     erb(:wrecked)
@@ -38,10 +36,16 @@ class Battle < Sinatra::Base
   end
 
   get '/sleep', :probability => 0.5 do
+  @game.attack(@game.next_turn)
    erb(:sleep)
  end
 
  get '/sleep' do
-  erb(:failed_attack)
+   erb(:failed_attack)
+ end
+
+ get '/play_2' do
+   @game.switch_turns
+   erb(:play_2)
  end
 end
