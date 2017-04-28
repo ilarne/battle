@@ -4,6 +4,7 @@ require './lib/game'
 
 class Battle < Sinatra::Base
   enable :sessions
+  set(:probability) { |value| condition { rand <= value } }
 
   before do
     @game = Game.current_game
@@ -35,4 +36,12 @@ class Battle < Sinatra::Base
     @game.switch_turns
     erb(:healed)
   end
+
+  get '/sleep', :probability => 0.5 do
+   erb(:sleep)
+ end
+
+ get '/sleep' do
+  erb(:failed_attack)
+ end
 end

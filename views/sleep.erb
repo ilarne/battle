@@ -1,0 +1,7 @@
+<%= "#{@game.next_turn.name} was attacked! He was put to sleep!" %>
+
+<%= "#{@game.next_turn.name}: #{@game.next_turn.health} HP" %>
+
+<form action="/wrecked" method="get">
+  <input type="submit" value="Attack again!!">
+</form>
