@@ -19,7 +19,7 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    # @game = Game.current_game
+  #   @game = Game.current_game
     erb(:play)
   end
 
@@ -28,5 +28,11 @@ class Battle < Sinatra::Base
     @game.attack(@game.next_turn)
     @game.switch_turns
     erb(:wrecked)
+  end
+
+  get '/healed' do
+    @game.heal(@game.current_turn)
+    @game.switch_turns
+    erb(:healed)
   end
 end

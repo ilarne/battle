@@ -31,6 +31,17 @@ feature 'Attacking' do
     expect(page).to have_content('Graham: 91 HP')
   end
 
+  feature 'Healing' do
+    scenario 'increases HP by ' do
+      sign_in_and_play
+      srand(325)
+      click_on 'Attack!'
+      click_on 'Switch turns'
+      click_on 'Heal!'
+      expect(page).to have_content('Graham: 111 HP')
+    end
+  end
+
   feature 'Switching turns' do
     scenario 'switch to other player' do
       sign_in_and_play

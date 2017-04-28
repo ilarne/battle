@@ -1,0 +1,7 @@
+<%= "#{@game.next_turn.name} healed themselves!" %>
+
+<%= "#{@game.next_turn.name}: #{@game.next_turn.health} HP" %>
+
+<form action="/play" method="get">
+  <input type="submit" value="Switch turns">
+</form>

@@ -21,6 +21,10 @@ class Game
     player.take_damage
   end
 
+  def heal(player)
+    player.restore_health
+  end
+
   def switch_turns
     @players[0], @players[1] = @players[1], @players[0]
     @current_turn = @players[0]
