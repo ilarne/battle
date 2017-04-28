@@ -1,3 +1,6 @@
+require 'player'
+require 'game'
+
 feature 'Entering names' do
   scenario 'submitting names' do
     sign_in_and_play
@@ -23,8 +26,9 @@ feature 'Attacking' do
 
   scenario 'reduces HP by 10' do
     sign_in_and_play
+    srand(325)
     click_on 'Attack!'
-    expect(page).to have_content('Graham: 20 HP')
+    expect(page).to have_content('Graham: 91 HP')
   end
 
   feature 'Switching turns' do
@@ -39,6 +43,7 @@ feature 'Attacking' do
     scenario 'end the game when a player dies' do
       sign_in_and_play
       fight_battle
+      click_button "Attack!"
       expect(page).to have_content('CaptainCode died!')
     end
   end

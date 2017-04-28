@@ -1,13 +1,12 @@
 <% if @game.current_turn.health <= 0 %>
-<%= "#{@game.current_turn.name} died!" %>
+  <%= "#{@game.current_turn.name} died!" %>
 
-<% else %>
-<%= "#{@game.current_turn.name} was attacked!" %>
+  <% else %>
+  <%= "#{@game.current_turn.name} was attacked!" %>
 
-<%= "#{@game.current_turn.name}: #{@game.current_turn.health} HP" %>
-
-
-<form action="/play" method="get">
-  <input type="submit" value="Switch turns">
-</form>
+  <%= "#{@game.current_turn.name}: #{@game.current_turn.health} HP" %>
+  
+  <form action="/play" method="get">
+    <input type="submit" value="Switch turns">
+  </form>
 <% end %>

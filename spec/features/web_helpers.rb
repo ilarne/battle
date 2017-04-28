@@ -6,14 +6,9 @@ def sign_in_and_play
 end
 
 def fight_battle
+  srand(124)
+  11.times do
   click_on 'Attack!'
-  visit '/wrecked'
   click_on 'Switch turns'
-  visit '/play'
-  click_on 'Attack!'
-  visit '/wrecked'
-  click_on 'Switch turns'
-  visit '/play'
-  click_on 'Attack!'
-  visit '/wrecked'
+ end
 end

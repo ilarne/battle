@@ -1,12 +1,12 @@
 class Player
-  attr_reader :name, :health
+  attr_accessor :name, :health
 
   def initialize(name)
     @name = name
-    @health = 30
+    @health = 100
   end
 
    def take_damage
-     @health -= 10
+     @health -= rand(41)
    end
 end
