@@ -11,7 +11,7 @@ Battle! is a Ruby battle web app built with Sinatra.
 3. Rackup is used as the webserver interface. From cloned repo, run `rackup config.ru` to load: 
 
 ```
-User-MacBook-Pro:rps-challenge user$ rackup config.ru
+User-MacBook-Pro:battle-app user$ rackup config.ru
 [2017-04-30 14:01:43] INFO  WEBrick 1.3.1
 [2017-04-30 14:01:43] INFO  ruby 2.4.0 (2016-12-24) [x86_64-darwin16]
 [2017-04-30 14:01:43] INFO  WEBrick::HTTPServer#start: pid=5090 port=9292
