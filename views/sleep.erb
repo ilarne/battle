@@ -1,6 +1,16 @@
+<% if @game.next_turn.health <= 0 %>
+  <%= "#{@game.next_turn.name} died!" %>
+<p>
+  <form action="/" method="get">
+  <input type="submit" value="Play again?">
+</form>
+</div>
+
+<% else %>
 <%= "#{@game.next_turn.name} was attacked! He was put to sleep!" %>
 
 <%= "#{@game.next_turn.name}: #{@game.next_turn.health} HP" %>
+<% end %>
 
 <form action="/wrecked" method="get">
   <input type="submit" value="Attack again!!">
