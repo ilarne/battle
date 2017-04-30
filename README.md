@@ -8,7 +8,7 @@ Battle! is a Ruby battle web app built with Sinatra.
 
 1. Clone this repo to local machine. 
 2. Run bundle to install Gems.
-3. Rackup is used as webserver interface. From clonde repo, run `$ rackup config.ru` to load: 
+3. Rackup is used as the webserver interface. From cloned repo, run `$ rackup config.ru` to load: 
 
 ```
 User-MacBook-Pro:rps-challenge user$ rackup config.ru
