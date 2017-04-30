@@ -26,8 +26,8 @@ Run tests with RSpec. From cloned directory, enter `$rspec` to run tests.
 
 Battle! is a turn-based, two-player fighting game. Players enter their name and play on same machine. The current move set is as follows:
    
-* Attack - deals a random amount of damage to opponent
-* Heal   - restores 20 HP to player
+* Attack - deals a random amount of damage to opponent.
+* Heal   - restores 20 HP to player.
 * Sleep  - attack with 50% chance of success. A successful hit deprives the opponent of their next turn which gives the attacker an                 additional turn.
 
 The game is over when one player's HP reaches 0.
